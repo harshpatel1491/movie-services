@@ -6,24 +6,24 @@ const app = express.Router()
 app.use(express.json())
 
 const movieSchema = new mongoose.Schema ({
-        id: String,
-        title: {
-            type: String,
-            required: [1, "Movie Title is required"]
-        },
-        year: String,
-        genres: Array,
-        ratings: Array,
-        poster: String,
-        contentRating: String,
-        duration: String,
-        releaseDate: String,
-        averageRating: String,
-        originalTitle: String,
-        storyline: String,
-        actors: Array,
-        imdbRating: String,
-        posterurl: String
+    id: String,
+    title: {
+        type: String,
+        required: [1, "Movie Title is required"]
+    },
+    year: String,
+    genres: Array,
+    ratings: Array,
+    poster: String,
+    contentRating: String,
+    duration: String,
+    releaseDate: String,
+    averageRating: String,
+    originalTitle: String,
+    storyline: String,
+    actors: Array,
+    imdbRating: String,
+    posterurl: String
 })
 
 const Movie = mongoose.model("movies", movieSchema);
